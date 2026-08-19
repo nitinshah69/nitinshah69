@@ -5,8 +5,17 @@ const fs = require('fs');
 const path = require('path');
 
 const configPath = path.join(__dirname, '..', 'config', 'profile.json');
-const heroPath = path.join(__dirname, '..', 'assets', 'hero-v2.svg');
 
-const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+let config = {};
+try {
+  if (fs.existsSync(configPath)) {
+    config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+  }
+} catch (e) {
+  console.warn('[WARN] Failed to parse profile.json:', e.message);
+}
 
-console.log(`[BUILD] Verified Hero generation for: ${config.name} (${config.title})`);
+const name = config.identity?.name || config.name || 'Nitin Shah';
+const title = config.identity?.title || config.title || 'AI / FULL-STACK DEVELOPER';
+
+console.log(`[BUILD] Verified Hero generation for: ${name} (${title})`);

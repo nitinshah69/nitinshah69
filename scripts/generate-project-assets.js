@@ -5,6 +5,16 @@ const fs = require('fs');
 const path = require('path');
 
 const configPath = path.join(__dirname, '..', 'config', 'profile.json');
-const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 
-console.log(`[BUILD] Verified Project Assets: ${config.projects.length} project cards active.`);
+let config = {};
+try {
+  if (fs.existsSync(configPath)) {
+    config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+  }
+} catch (e) {
+  console.warn('[WARN] Failed to parse profile.json:', e.message);
+}
+
+const projects = config.projects || [];
+
+console.log(`[BUILD] Verified Project Assets: ${projects.length} project cards active.`);
