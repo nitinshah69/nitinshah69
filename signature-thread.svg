@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 80" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="st-thread-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6A1F" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#FF6A1F" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#FFA066" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <style>
+      .font-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+
+      @keyframes stDraw {
+        0% { stroke-dashoffset: 1200; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      @keyframes beaconPulse {
+        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 2px #FF6A1F); }
+        50% { transform: scale(1.4); filter: drop-shadow(0 0 8px #FFA066); }
+      }
+
+      .st-anim-line {
+        stroke-dasharray: 200 600;
+        animation: stDraw 5.5s linear infinite;
+      }
+
+      .signature-beacon {
+        animation: beaconPulse 2.5s ease-in-out infinite;
+        transform-origin: 875px 40px;
+      }
+    </style>
+  </defs>
+
+  <!-- Base Grid Line -->
+  <line x1="45" y1="40" x2="875" y2="40" stroke="#1A1A1A" stroke-width="1.5"/>
+  
+  <!-- Active Animated Thread -->
+  <line x1="45" y1="40" x2="875" y2="40" stroke="url(#st-thread-grad)" stroke-width="2.5" class="st-anim-line" stroke-linecap="round"/>
+
+  <!-- Narrative Milestones Along The Line -->
+  <g transform="translate(50, 40)">
+    <circle cx="0" cy="0" r="3.5" fill="#0A0A0A" stroke="#FF6A1F" stroke-width="1.5"/>
+    <text x="10" y="4" fill="#A1A1A1" font-size="9" font-weight="700" letter-spacing="1" class="font-mono">START</text>
+  </g>
+
+  <g transform="translate(180, 40)">
+    <circle cx="0" cy="0" r="3" fill="#0A0A0A" stroke="#444444" stroke-width="1.2"/>
+    <text x="10" y="4" fill="#666666" font-size="8.5" font-weight="600" letter-spacing="1" class="font-mono">EXPLORE</text>
+  </g>
+
+  <g transform="translate(320, 40)">
+    <circle cx="0" cy="0" r="3" fill="#0A0A0A" stroke="#444444" stroke-width="1.2"/>
+    <text x="10" y="4" fill="#666666" font-size="8.5" font-weight="600" letter-spacing="1" class="font-mono">BUILD</text>
+  </g>
+
+  <g transform="translate(460, 40)">
+    <circle cx="0" cy="0" r="3" fill="#0A0A0A" stroke="#444444" stroke-width="1.2"/>
+    <text x="10" y="4" fill="#666666" font-size="8.5" font-weight="600" letter-spacing="1" class="font-mono">LEARN</text>
+  </g>
+
+  <g transform="translate(600, 40)">
+    <circle cx="0" cy="0" r="3" fill="#0A0A0A" stroke="#444444" stroke-width="1.2"/>
+    <text x="10" y="4" fill="#666666" font-size="8.5" font-weight="600" letter-spacing="1" class="font-mono">SHIP</text>
+  </g>
+
+  <g transform="translate(740, 40)">
+    <circle cx="0" cy="0" r="3.5" fill="#0A0A0A" stroke="#FF6A1F" stroke-width="1.5"/>
+    <text x="10" y="4" fill="#FFA066" font-size="9" font-weight="700" letter-spacing="1" class="font-mono">EVOLVE</text>
+  </g>
+
+  <!-- Final Signature Pulsing Point -->
+  <g transform="translate(875, 40)" class="signature-beacon">
+    <circle cx="0" cy="0" r="5" fill="#FF6A1F"/>
+    <circle cx="0" cy="0" r="2" fill="#FFFFFF"/>
+  </g>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 150" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="rm-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E0E0E"/>
+      <stop offset="100%" stop-color="#080808"/>
+    </linearGradient>
+
+    <linearGradient id="active-step" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6A1F"/>
+      <stop offset="100%" stop-color="#E0550F"/>
+    </linearGradient>
+
+    <style>
+      .font-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="880" height="150" rx="10" fill="url(#rm-bg)"/>
+  <rect width="878" height="148" x="1" y="1" rx="9" fill="none" stroke="#242424" stroke-width="1"/>
+
+  <!-- Header -->
+  <g transform="translate(35, 28)">
+    <text x="0" y="0" fill="#F5F5F0" font-size="12" font-weight="700" letter-spacing="1.5" class="font-mono">ENGINEERING HORIZON // TECHNICAL TRAJECTORY</text>
+    <text x="810" y="0" text-anchor="end" fill="#666666" font-size="10" letter-spacing="1" class="font-mono">EVOLUTION</text>
+  </g>
+
+  <!-- Track -->
+  <line x1="60" y1="80" x2="820" y2="80" stroke="#222222" stroke-width="2"/>
+  <line x1="60" y1="80" x2="520" y2="80" stroke="#FF6A1F" stroke-width="2"/>
+
+  <!-- Stage 1: CORE CS & FOUNDATIONS -->
+  <g transform="translate(90, 80)">
+    <circle cx="0" cy="0" r="5" fill="#0A0A0A" stroke="#FF6A1F" stroke-width="2"/>
+    <circle cx="0" cy="0" r="2" fill="#FF6A1F"/>
+    <text x="0" y="24" text-anchor="middle" fill="#A1A1A1" font-size="10.5" font-weight="600" class="font-sans">FOUNDATIONS</text>
+    <text x="0" y="38" text-anchor="middle" fill="#555555" font-size="8.5" class="font-mono">Data Struct &amp; Arch</text>
+  </g>
+
+  <!-- Stage 2: FULL-STACK ECOSYSTEM -->
+  <g transform="translate(290, 80)">
+    <circle cx="0" cy="0" r="5" fill="#0A0A0A" stroke="#FF6A1F" stroke-width="2"/>
+    <circle cx="0" cy="0" r="2" fill="#FF6A1F"/>
+    <text x="0" y="24" text-anchor="middle" fill="#F5F5F0" font-size="10.5" font-weight="600" class="font-sans">FULL-STACK WEB</text>
+    <text x="0" y="38" text-anchor="middle" fill="#888888" font-size="8.5" class="font-mono">Next.js, Node, SQL</text>
+  </g>
+
+  <!-- Stage 3: GENAI INTEGRATION (ACTIVE) -->
+  <g transform="translate(490, 80)">
+    <circle cx="0" cy="0" r="6" fill="#FF6A1F" stroke="#FFFFFF" stroke-width="1.5"/>
+    <text x="0" y="-14" text-anchor="middle" fill="#FF6A1F" font-size="8.5" font-weight="700" letter-spacing="1" class="font-mono">[ CURRENT FOCUS ]</text>
+    <text x="0" y="24" text-anchor="middle" fill="#FFA066" font-size="11" font-weight="700" class="font-sans">GENAI &amp; RAG</text>
+    <text x="0" y="38" text-anchor="middle" fill="#A1A1A1" font-size="8.5" class="font-mono">LLMs, Vector Embeddings</text>
+  </g>
+
+  <!-- Stage 4: AGENTIC SYSTEMS -->
+  <g transform="translate(680, 80)">
+    <circle cx="0" cy="0" r="5" fill="#0A0A0A" stroke="#444444" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="2" fill="#444444"/>
+    <text x="0" y="24" text-anchor="middle" fill="#777777" font-size="10.5" font-weight="600" class="font-sans">AGENTIC SYSTEMS</text>
+    <text x="0" y="38" text-anchor="middle" fill="#555555" font-size="8.5" class="font-mono">Multi-Agent, LangGraph</text>
+  </g>
+
+  <!-- Stage 5: PRODUCTION AI PLATFORMS -->
+  <g transform="translate(820, 80)">
+    <circle cx="0" cy="0" r="5" fill="#0A0A0A" stroke="#444444" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="2" fill="#444444"/>
+    <text x="0" y="24" text-anchor="middle" fill="#777777" font-size="10.5" font-weight="600" class="font-sans">AI PLATFORMS</text>
+    <text x="0" y="38" text-anchor="middle" fill="#555555" font-size="8.5" class="font-mono">Autonomous Systems</text>
+  </g>
+</svg>
