@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 180" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="wf-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F0F0F"/>
+      <stop offset="100%" stop-color="#080808"/>
+    </linearGradient>
+
+    <linearGradient id="wf-thread" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6A1F" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#FF6A1F" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#FFA066" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <style>
+      .font-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+
+      @keyframes wfDraw {
+        0% { stroke-dashoffset: 1200; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      .wf-anim-line {
+        stroke-dasharray: 180 500;
+        animation: wfDraw 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Container -->
+  <rect width="880" height="180" rx="10" fill="url(#wf-bg)"/>
+  <rect width="878" height="178" x="1" y="1" rx="9" fill="none" stroke="#242424" stroke-width="1"/>
+
+  <!-- Title Header -->
+  <g transform="translate(35, 32)">
+    <text x="0" y="0" fill="#F5F5F0" font-size="12" font-weight="700" letter-spacing="1.5" class="font-mono">ENGINEERING WORKFLOW // HOW I BUILD</text>
+    <text x="810" y="0" text-anchor="end" fill="#666666" font-size="10" letter-spacing="1" class="font-mono">PIPELINE.V2</text>
+  </g>
+
+  <!-- Static Track Line -->
+  <line x1="45" y1="95" x2="835" y2="95" stroke="#1E1E1E" stroke-width="2"/>
+  
+  <!-- Animated Intelligent Thread -->
+  <line x1="45" y1="95" x2="835" y2="95" stroke="url(#wf-thread)" stroke-width="2" class="wf-anim-line" stroke-linecap="round"/>
+
+  <!-- Step 1: PROBLEM -->
+  <g transform="translate(60, 95)">
+    <circle cx="0" cy="0" r="4" fill="#0A0A0A" stroke="#444444" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="1.5" fill="#A1A1A1"/>
+    <text x="0" y="-16" text-anchor="middle" fill="#666666" font-size="9" font-weight="600" class="font-mono">01</text>
+    <text x="0" y="24" text-anchor="middle" fill="#E5E5E5" font-size="10" font-weight="600" class="font-sans">PROBLEM</text>
+    <text x="0" y="38" text-anchor="middle" fill="#666666" font-size="8.5" class="font-mono">Define</text>
+  </g>
+
+  <!-- Step 2: UNDERSTAND -->
+  <g transform="translate(170, 95)">
+    <circle cx="0" cy="0" r="4" fill="#0A0A0A" stroke="#444444" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="1.5" fill="#A1A1A1"/>
+    <text x="0" y="-16" text-anchor="middle" fill="#666666" font-size="9" font-weight="600" class="font-mono">02</text>
+    <text x="0" y="24" text-anchor="middle" fill="#E5E5E5" font-size="10" font-weight="600" class="font-sans">ANALYZE</text>
+    <text x="0" y="38" text-anchor="middle" fill="#666666" font-size="8.5" class="font-mono">Research</text>
+  </g>
+
+  <!-- Step 3: ARCHITECT -->
+  <g transform="translate(280, 95)">
+    <circle cx="0" cy="0" r="4" fill="#0A0A0A" stroke="#444444" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="1.5" fill="#A1A1A1"/>
+    <text x="0" y="-16" text-anchor="middle" fill="#666666" font-size="9" font-weight="600" class="font-mono">03</text>
+    <text x="0" y="24" text-anchor="middle" fill="#E5E5E5" font-size="10" font-weight="600" class="font-sans">DESIGN</text>
+    <text x="0" y="38" text-anchor="middle" fill="#666666" font-size="8.5" class="font-mono">Schemas</text>
+  </g>
+
+  <!-- Step 4: BUILD -->
+  <g transform="translate(390, 95)">
+    <circle cx="0" cy="0" r="4" fill="#0A0A0A" stroke="#FF6A1F" stroke-width="2"/>
+    <circle cx="0" cy="0" r="1.5" fill="#FF6A1F"/>
+    <text x="0" y="-16" text-anchor="middle" fill="#FF6A1F" font-size="9" font-weight="600" class="font-mono">04</text>
+    <text x="0" y="24" text-anchor="middle" fill="#F5F5F0" font-size="10" font-weight="600" class="font-sans">BUILD</text>
+    <text x="0" y="38" text-anchor="middle" fill="#888888" font-size="8.5" class="font-mono">Next/React</text>
+  </g>
+
+  <!-- Step 5: INTEGRATE AI -->
+  <g transform="translate(505, 95)">
+    <circle cx="0" cy="0" r="4.5" fill="#0A0A0A" stroke="#FF6A1F" stroke-width="2"/>
+    <circle cx="0" cy="0" r="2" fill="#FF6A1F"/>
+    <text x="0" y="-16" text-anchor="middle" fill="#FF6A1F" font-size="9" font-weight="600" class="font-mono">05</text>
+    <text x="0" y="24" text-anchor="middle" fill="#FFA066" font-size="10" font-weight="700" class="font-sans">EMBED AI</text>
+    <text x="0" y="38" text-anchor="middle" fill="#888888" font-size="8.5" class="font-mono">LLM/RAG</text>
+  </g>
+
+  <!-- Step 6: TEST -->
+  <g transform="translate(615, 95)">
+    <circle cx="0" cy="0" r="4" fill="#0A0A0A" stroke="#444444" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="1.5" fill="#A1A1A1"/>
+    <text x="0" y="-16" text-anchor="middle" fill="#666666" font-size="9" font-weight="600" class="font-mono">06</text>
+    <text x="0" y="24" text-anchor="middle" fill="#E5E5E5" font-size="10" font-weight="600" class="font-sans">TEST</text>
+    <text x="0" y="38" text-anchor="middle" fill="#666666" font-size="8.5" class="font-mono">E2E/Load</text>
+  </g>
+
+  <!-- Step 7: SHIP -->
+  <g transform="translate(725, 95)">
+    <circle cx="0" cy="0" r="4" fill="#0A0A0A" stroke="#444444" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="1.5" fill="#A1A1A1"/>
+    <text x="0" y="-16" text-anchor="middle" fill="#666666" font-size="9" font-weight="600" class="font-mono">07</text>
+    <text x="0" y="24" text-anchor="middle" fill="#E5E5E5" font-size="10" font-weight="600" class="font-sans">DEPLOY</text>
+    <text x="0" y="38" text-anchor="middle" fill="#666666" font-size="8.5" class="font-mono">CI/CD</text>
+  </g>
+
+  <!-- Step 8: ITERATE -->
+  <g transform="translate(825, 95)">
+    <circle cx="0" cy="0" r="5" fill="#0A0A0A" stroke="#FF6A1F" stroke-width="2"/>
+    <circle cx="0" cy="0" r="2" fill="#FFFFFF"/>
+    <text x="0" y="-16" text-anchor="middle" fill="#FF6A1F" font-size="9" font-weight="600" class="font-mono">08</text>
+    <text x="0" y="24" text-anchor="middle" fill="#F5F5F0" font-size="10" font-weight="700" class="font-sans">ITERATE</text>
+    <text x="0" y="38" text-anchor="middle" fill="#888888" font-size="8.5" class="font-mono">Telemetry</text>
+  </g>
+</svg>
