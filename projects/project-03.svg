@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="p3-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141414"/>
+      <stop offset="100%" stop-color="#080808"/>
+    </linearGradient>
+
+    <style>
+      .font-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+
+      @keyframes schemaPacketFlow {
+        0% { stroke-dashoffset: 100; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      @keyframes statusOKBlink {
+        0%, 100% { filter: drop-shadow(0 0 1px #FF6A1F); }
+        50% { filter: drop-shadow(0 0 6px #FF6A1F); }
+      }
+
+      .flow-vector {
+        stroke-dasharray: 10 30;
+        animation: schemaPacketFlow 2s linear infinite;
+      }
+
+      .pulse-ok {
+        animation: statusOKBlink 3s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Base Plate -->
+  <rect width="700" height="300" rx="10" fill="url(#p3-bg)"/>
+  <rect width="698" height="298" x="1" y="1" rx="9" fill="none" stroke="#242424" stroke-width="1"/>
+
+  <!-- Top Metadata Bar -->
+  <g transform="translate(30, 32)">
+    <circle cx="6" cy="0" r="3.5" fill="#FF6A1F"/>
+    <text x="18" y="4" fill="#A1A1A1" font-size="10" font-weight="700" letter-spacing="1.5" class="font-mono">PROJECT.03 // FULL-STACK AUTOMATION</text>
+    <text x="640" y="4" text-anchor="end" fill="#666666" font-size="9.5" class="font-mono">ENTERPRISE HUB</text>
+  </g>
+
+  <!-- Left Info Column -->
+  <g transform="translate(30, 75)">
+    <text x="0" y="0" fill="#F5F5F0" font-size="20" font-weight="700" class="font-sans">Enterprise Cloud Workflow Hub</text>
+    <text x="0" y="24" fill="#888888" font-size="11.5" class="font-sans">Institutional operations automation with role-based access, MySQL schemas &amp; reporting.</text>
+    
+    <!-- Tech Pills -->
+    <g transform="translate(0, 50)">
+      <rect width="65" height="22" rx="4" fill="#181818" stroke="#2A2A2A"/>
+      <text x="32" y="14" text-anchor="middle" fill="#E5E5E5" font-size="9" font-weight="600" class="font-mono">React</text>
+      
+      <rect x="73" width="70" height="22" rx="4" fill="#181818" stroke="#2A2A2A"/>
+      <text x="108" y="14" text-anchor="middle" fill="#E5E5E5" font-size="9" font-weight="600" class="font-mono">PHP / REST</text>
+
+      <rect x="151" width="60" height="22" rx="4" fill="#181818" stroke="#2A2A2A"/>
+      <text x="181" y="14" text-anchor="middle" fill="#E5E5E5" font-size="9" font-weight="600" class="font-mono">MySQL</text>
+
+      <rect x="219" width="70" height="22" rx="4" fill="#181818" stroke="#2A2A2A"/>
+      <text x="254" y="14" text-anchor="middle" fill="#E5E5E5" font-size="9" font-weight="600" class="font-mono">Tailwind</text>
+    </g>
+
+    <!-- Key Metrics Highlight -->
+    <g transform="translate(0, 115)">
+      <text x="0" y="0" fill="#666666" font-size="9" font-weight="600" class="font-mono">AUTH PROTOCOL</text>
+      <text x="0" y="18" fill="#F5F5F0" font-size="15" font-weight="700" class="font-mono">RBAC / JWT</text>
+
+      <text x="120" y="0" fill="#666666" font-size="9" font-weight="600" class="font-mono">PROCESS TIME</text>
+      <text x="120" y="18" fill="#FF6A1F" font-size="15" font-weight="700" class="font-mono">-65% Manual</text>
+      
+      <text x="230" y="0" fill="#666666" font-size="9" font-weight="600" class="font-mono">DATABASE</text>
+      <text x="230" y="18" fill="#F5F5F0" font-size="15" font-weight="700" class="font-mono">Relational</text>
+    </g>
+  </g>
+
+  <!-- Right Visual Card: Schema Graph & Node Architecture -->
+  <g transform="translate(410, 70)">
+    <rect width="250" height="195" rx="8" fill="#121212" stroke="#262626"/>
+    
+    <g transform="translate(25, 30)">
+      <!-- Node A: Auth Controller -->
+      <rect width="90" height="40" rx="4" fill="#181818" stroke="#333333"/>
+      <text x="45" y="24" text-anchor="middle" fill="#E5E5E5" font-size="9" font-weight="600" class="font-mono">Auth::Role</text>
+
+      <!-- Node B: DB Model -->
+      <rect x="110" width="90" height="40" rx="4" fill="#181818" stroke="#333333"/>
+      <text x="155" y="24" text-anchor="middle" fill="#E5E5E5" font-size="9" font-weight="600" class="font-mono">MySQL::Table</text>
+
+      <!-- Connecting Lines & Moving Flow -->
+      <line x1="90" y1="20" x2="110" y2="20" stroke="#FF6A1F" stroke-width="2" class="flow-vector"/>
+      <line x1="45" y1="40" x2="45" y2="75" stroke="#FF6A1F" stroke-width="1.5" class="flow-vector"/>
+      <line x1="155" y1="40" x2="155" y2="75" stroke="#FF6A1F" stroke-width="1.5" class="flow-vector"/>
+
+      <!-- Node C: Dispatcher & API -->
+      <g class="pulse-ok">
+        <rect y="75" width="200" height="45" rx="4" fill="#1A1A1A" stroke="#FF6A1F" stroke-width="1.2"/>
+        <text x="100" y="98" text-anchor="middle" fill="#F5F5F0" font-size="10" font-weight="700" class="font-mono">REST Workflow Pipeline</text>
+        <text x="100" y="112" text-anchor="middle" fill="#FF6A1F" font-size="8" font-weight="700" class="font-mono">Status: 200 OK // Active</text>
+      </g>
+    </g>
+  </g>
+</svg>

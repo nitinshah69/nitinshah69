@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 340" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Dark Architectural Canvas Gradient -->
+    <linearGradient id="hero-bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E0E0E"/>
+      <stop offset="60%" stop-color="#080808"/>
+      <stop offset="100%" stop-color="#040404"/>
+    </linearGradient>
+
+    <!-- Intelligent Thread Gradient (BUILD -> AI -> WEB -> SYSTEMS -> SHIP) -->
+    <linearGradient id="v2-thread-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6A1F" stop-opacity="0.2"/>
+      <stop offset="30%" stop-color="#FF6A1F" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#FFA066" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#FF6A1F" stop-opacity="0.4"/>
+    </linearGradient>
+
+    <!-- Architectural Grid Pattern -->
+    <pattern id="arch-grid" width="46" height="46" patternUnits="userSpaceOnUse">
+      <path d="M 46 0 L 0 0 0 46" fill="none" stroke="#1C1C1C" stroke-width="0.75" stroke-opacity="0.5"/>
+      <circle cx="0" cy="0" r="1" fill="#333333" opacity="0.6"/>
+    </pattern>
+
+    <!-- Soft Glow Filter -->
+    <filter id="thread-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <style>
+      .font-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif; }
+
+      @keyframes v2Pulse {
+        0%, 100% { opacity: 0.35; transform: scale(0.9); }
+        50% { opacity: 1; transform: scale(1.18); }
+      }
+
+      /* 3-State Path Motion: Enter -> Build -> Loop */
+      @keyframes threadDraw {
+        0% { stroke-dashoffset: 1600; }
+        60% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: -1600; }
+      }
+
+      @keyframes microBlink {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 0.9; }
+      }
+
+      .pulse-dot {
+        animation: v2Pulse 3.5s ease-in-out infinite;
+        transform-origin: 48px 36px;
+      }
+
+      .animated-thread-v2 {
+        stroke-dasharray: 260 700;
+        animation: threadDraw 9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      }
+
+      .micro-tick {
+        animation: microBlink 4s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Canvas Surface -->
+  <rect width="920" height="340" rx="14" fill="url(#hero-bg-grad)"/>
+  <rect width="920" height="340" rx="14" fill="url(#arch-grid)"/>
+  <rect width="918" height="338" x="1" y="1" rx="13" fill="none" stroke="#242424" stroke-width="1.2"/>
+
+  <!-- Top System Header Bar -->
+  <g transform="translate(42, 36)">
+    <circle cx="6" cy="0" r="4" fill="#FF6A1F" class="pulse-dot" filter="url(#thread-glow)"/>
+    <circle cx="6" cy="0" r="1.8" fill="#FFFFFF"/>
+    <text x="20" y="4" fill="#A1A1A1" font-size="10.5" font-weight="600" letter-spacing="1.5" class="font-mono">NITIN SHAH // ARCHITECTURAL SYSTEMS LAB</text>
+    <text x="836" y="4" text-anchor="end" fill="#555555" font-size="9.5" letter-spacing="1.2" class="font-mono">SPEC: 2026.PRO</text>
+  </g>
+
+  <!-- Structural Header Divider -->
+  <line x1="42" y1="56" x2="878" y2="56" stroke="#1C1C1C" stroke-width="1"/>
+
+  <!-- Background Guide Geometry -->
+  <circle cx="110" cy="160" r="32" fill="none" stroke="#181818" stroke-width="1" stroke-dasharray="3 3"/>
+  <circle cx="460" cy="130" r="44" fill="none" stroke="#181818" stroke-width="1" stroke-dasharray="3 3"/>
+  <circle cx="810" cy="165" r="32" fill="none" stroke="#181818" stroke-width="1" stroke-dasharray="3 3"/>
+
+  <!-- Background Thread Track -->
+  <path d="M 60 185 C 160 185, 180 120, 270 120 C 360 120, 380 205, 470 205 C 560 205, 590 125, 680 125 C 760 125, 790 170, 860 170" 
+        fill="none" stroke="#181818" stroke-width="2"/>
+
+  <!-- Animated Active Intelligent Thread -->
+  <path d="M 60 185 C 160 185, 180 120, 270 120 C 360 120, 380 205, 470 205 C 560 205, 590 125, 680 125 C 760 125, 790 170, 860 170" 
+        fill="none" stroke="url(#v2-thread-grad)" stroke-width="2.5" stroke-linecap="round" class="animated-thread-v2" filter="url(#thread-glow)"/>
+
+  <!-- Node 01: BUILD -->
+  <g transform="translate(60, 185)">
+    <circle cx="0" cy="0" r="5" fill="#0A0A0A" stroke="#FF6A1F" stroke-width="2"/>
+    <circle cx="0" cy="0" r="2" fill="#FF6A1F"/>
+    <text x="0" y="-14" text-anchor="middle" fill="#A1A1A1" font-size="9" font-weight="700" letter-spacing="1.2" class="font-mono">01 BUILD</text>
+  </g>
+
+  <!-- Node 02: AI -->
+  <g transform="translate(270, 120)">
+    <circle cx="0" cy="0" r="5" fill="#0A0A0A" stroke="#FF6A1F" stroke-width="2"/>
+    <circle cx="0" cy="0" r="2" fill="#FF6A1F"/>
+    <text x="0" y="-14" text-anchor="middle" fill="#A1A1A1" font-size="9" font-weight="700" letter-spacing="1.2" class="font-mono">02 AI</text>
+  </g>
+
+  <!-- Node 03: WEB -->
+  <g transform="translate(470, 205)">
+    <circle cx="0" cy="0" r="5" fill="#0A0A0A" stroke="#FF6A1F" stroke-width="2"/>
+    <circle cx="0" cy="0" r="2" fill="#FF6A1F"/>
+    <text x="0" y="22" text-anchor="middle" fill="#A1A1A1" font-size="9" font-weight="700" letter-spacing="1.2" class="font-mono">03 WEB</text>
+  </g>
+
+  <!-- Node 04: SYSTEMS -->
+  <g transform="translate(680, 125)">
+    <circle cx="0" cy="0" r="5" fill="#0A0A0A" stroke="#FF6A1F" stroke-width="2"/>
+    <circle cx="0" cy="0" r="2" fill="#FF6A1F"/>
+    <text x="0" y="-14" text-anchor="middle" fill="#A1A1A1" font-size="9" font-weight="700" letter-spacing="1.2" class="font-mono">04 SYSTEMS</text>
+  </g>
+
+  <!-- Node 05: SHIP -->
+  <g transform="translate(860, 170)">
+    <circle cx="0" cy="0" r="6" fill="#0A0A0A" stroke="#FF6A1F" stroke-width="2" filter="url(#thread-glow)"/>
+    <circle cx="0" cy="0" r="2.5" fill="#FFFFFF"/>
+    <text x="0" y="-16" text-anchor="middle" fill="#F5F5F0" font-size="9" font-weight="700" letter-spacing="1.2" class="font-mono">05 SHIP</text>
+  </g>
+
+  <!-- Primary Typography & Positioning -->
+  <g transform="translate(44, 252)">
+    <text x="0" y="0" fill="#F5F5F0" font-size="30" font-weight="700" letter-spacing="-0.5" class="font-sans">NITIN SHAH</text>
+    <text x="210" y="-3" fill="#FF6A1F" font-size="12.5" font-weight="700" letter-spacing="1.5" class="font-mono">/ AI &amp; FULL-STACK SYSTEMS</text>
+    
+    <text x="0" y="28" fill="#A1A1A1" font-size="13.5" font-weight="400" letter-spacing="0.2" class="font-sans">
+      Architecting intelligent web platforms, agentic workflows, and high-throughput production systems.
+    </text>
+  </g>
+
+  <!-- Bottom Technical Coordinate Stamp -->
+  <g transform="translate(876, 298)">
+    <text x="0" y="0" text-anchor="end" fill="#444444" font-size="9.5" letter-spacing="1.2" class="font-mono">LAT 28.6139° N · LON 77.2090° E // PROD READY</text>
+  </g>
+</svg>
