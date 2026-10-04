@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 300" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="sf-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#101010"/>
+      <stop offset="100%" stop-color="#070707"/>
+    </linearGradient>
+
+    <linearGradient id="sf-line-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6A1F" stop-opacity="0.3"/>
+      <stop offset="70%" stop-color="#FF6A1F" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#FFA066" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <style>
+      .font-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+
+      @keyframes drawSkillLine {
+        0% { stroke-dashoffset: 400; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      @keyframes pulseEndpoint {
+        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 2px #FF6A1F); }
+        50% { transform: scale(1.3); filter: drop-shadow(0 0 6px #FFA066); }
+      }
+
+      .skill-draw-1 { stroke-dasharray: 80 200; animation: drawSkillLine 3.2s linear infinite; }
+      .skill-draw-2 { stroke-dasharray: 70 180; animation: drawSkillLine 3.6s linear infinite; }
+      .skill-draw-3 { stroke-dasharray: 60 160; animation: drawSkillLine 3.4s linear infinite; }
+      .skill-draw-4 { stroke-dasharray: 75 190; animation: drawSkillLine 3.8s linear infinite; }
+      .skill-draw-5 { stroke-dasharray: 50 150; animation: drawSkillLine 3.0s linear infinite; }
+      .skill-draw-6 { stroke-dasharray: 45 140; animation: drawSkillLine 3.3s linear infinite; }
+
+      .endpoint-glow {
+        animation: pulseEndpoint 2.5s ease-in-out infinite;
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+    </style>
+  </defs>
+
+  <!-- Container Base -->
+  <rect width="920" height="300" rx="10" fill="url(#sf-bg)"/>
+  <rect width="918" height="298" x="1" y="1" rx="9" fill="none" stroke="#242424" stroke-width="1"/>
+
+  <!-- Top Title -->
+  <g transform="translate(35, 32)">
+    <text x="0" y="0" fill="#F5F5F0" font-size="12" font-weight="700" letter-spacing="1.5" class="font-mono">ENGINEERING MASTERY // HORIZONTAL JOURNEY VECTORS</text>
+    <text x="850" y="0" text-anchor="end" fill="#666666" font-size="9.5" class="font-mono">NON-LINEAR MATURITY</text>
+  </g>
+
+  <!-- Skill Row 1: React.js & Next.js 14 -->
+  <g transform="translate(35, 75)">
+    <text x="0" y="0" fill="#E5E5E5" font-size="12" font-weight="600" class="font-sans">React.js &amp; Next.js 14</text>
+    <text x="180" y="0" fill="#666666" font-size="9.5" class="font-mono">App Router · Server Actions</text>
+    <!-- Journey Track -->
+    <line x1="360" y1="-4" x2="720" y2="-4" stroke="#222222" stroke-width="2"/>
+    <line x1="360" y1="-4" x2="685" y2="-4" stroke="#FF6A1F" stroke-width="2"/>
+    <line x1="360" y1="-4" x2="685" y2="-4" stroke="#FFFFFF" stroke-width="2.2" class="skill-draw-1" stroke-linecap="round"/>
+    <circle cx="360" cy="-4" r="3.5" fill="#FF6A1F"/>
+    <circle cx="685" cy="-4" r="5" fill="#0A0A0A" stroke="#FF6A1F" stroke-width="2" class="endpoint-glow"/>
+    <circle cx="685" cy="-4" r="2" fill="#FF6A1F"/>
+    <!-- Status Tag -->
+    <rect x="750" y="-14" width="95" height="20" rx="4" fill="#181818" stroke="#2A2A2A"/>
+    <text x="797" y="0" text-anchor="middle" fill="#FF6A1F" font-size="9" font-weight="700" class="font-mono">PRODUCTION</text>
+  </g>
+
+  <!-- Skill Row 2: TypeScript & JavaScript -->
+  <g transform="translate(35, 110)">
+    <text x="0" y="0" fill="#E5E5E5" font-size="12" font-weight="600" class="font-sans">TypeScript &amp; JavaScript</text>
+    <text x="180" y="0" fill="#666666" font-size="9.5" class="font-mono">Strict Types · Modern Web APIs</text>
+    <line x1="360" y1="-4" x2="720" y2="-4" stroke="#222222" stroke-width="2"/>
+    <line x1="360" y1="-4" x2="670" y2="-4" stroke="#FF6A1F" stroke-width="2"/>
+    <line x1="360" y1="-4" x2="670" y2="-4" stroke="#FFFFFF" stroke-width="2.2" class="skill-draw-2" stroke-linecap="round"/>
+    <circle cx="360" cy="-4" r="3.5" fill="#FF6A1F"/>
+    <circle cx="670" cy="-4" r="5" fill="#0A0A0A" stroke="#FF6A1F" stroke-width="2" class="endpoint-glow"/>
+    <circle cx="670" cy="-4" r="2" fill="#FF6A1F"/>
+    <rect x="750" y="-14" width="95" height="20" rx="4" fill="#181818" stroke="#2A2A2A"/>
+    <text x="797" y="0" text-anchor="middle" fill="#FF6A1F" font-size="9" font-weight="700" class="font-mono">PRODUCTION</text>
+  </g>
+
+  <!-- Skill Row 3: Python & FastAPI -->
+  <g transform="translate(35, 145)">
+    <text x="0" y="0" fill="#E5E5E5" font-size="12" font-weight="600" class="font-sans">Python &amp; FastAPI</text>
+    <text x="180" y="0" fill="#666666" font-size="9.5" class="font-mono">Async REST · Pydantic Schemas</text>
+    <line x1="360" y1="-4" x2="720" y2="-4" stroke="#222222" stroke-width="2"/>
+    <line x1="360" y1="-4" x2="600" y2="-4" stroke="#FF6A1F" stroke-width="2"/>
+    <line x1="360" y1="-4" x2="600" y2="-4" stroke="#FFFFFF" stroke-width="2.2" class="skill-draw-3" stroke-linecap="round"/>
+    <circle cx="360" cy="-4" r="3.5" fill="#FF6A1F"/>
+    <circle cx="600" cy="-4" r="4.5" fill="#0A0A0A" stroke="#FF6A1F" stroke-width="2"/>
+    <circle cx="600" cy="-4" r="2" fill="#FF6A1F"/>
+    <rect x="750" y="-14" width="95" height="20" rx="4" fill="#181818" stroke="#2A2A2A"/>
+    <text x="797" y="0" text-anchor="middle" fill="#F5F5F0" font-size="9" font-weight="600" class="font-mono">COMFORTABLE</text>
+  </g>
+
+  <!-- Skill Row 4: Firebase, SQL & NoSQL -->
+  <g transform="translate(35, 180)">
+    <text x="0" y="0" fill="#E5E5E5" font-size="12" font-weight="600" class="font-sans">Firebase, SQL &amp; NoSQL</text>
+    <text x="180" y="0" fill="#666666" font-size="9.5" class="font-mono">Firestore · PostgreSQL · MySQL</text>
+    <line x1="360" y1="-4" x2="720" y2="-4" stroke="#222222" stroke-width="2"/>
+    <line x1="360" y1="-4" x2="650" y2="-4" stroke="#FF6A1F" stroke-width="2"/>
+    <line x1="360" y1="-4" x2="650" y2="-4" stroke="#FFFFFF" stroke-width="2.2" class="skill-draw-4" stroke-linecap="round"/>
+    <circle cx="360" cy="-4" r="3.5" fill="#FF6A1F"/>
+    <circle cx="650" cy="-4" r="5" fill="#0A0A0A" stroke="#FF6A1F" stroke-width="2" class="endpoint-glow"/>
+    <circle cx="650" cy="-4" r="2" fill="#FF6A1F"/>
+    <rect x="750" y="-14" width="95" height="20" rx="4" fill="#181818" stroke="#2A2A2A"/>
+    <text x="797" y="0" text-anchor="middle" fill="#FF6A1F" font-size="9" font-weight="700" class="font-mono">PRODUCTION</text>
+  </g>
+
+  <!-- Skill Row 5: LLMs, RAG & Vector Embeddings -->
+  <g transform="translate(35, 215)">
+    <text x="0" y="0" fill="#E5E5E5" font-size="12" font-weight="600" class="font-sans">LLMs, RAG &amp; Embeddings</text>
+    <text x="180" y="0" fill="#666666" font-size="9.5" class="font-mono">OpenAI · Vector Similarity Search</text>
+    <line x1="360" y1="-4" x2="720" y2="-4" stroke="#222222" stroke-width="2"/>
+    <line x1="360" y1="-4" x2="520" y2="-4" stroke="#FF6A1F" stroke-width="2"/>
+    <line x1="360" y1="-4" x2="520" y2="-4" stroke="#FFFFFF" stroke-width="2.2" class="skill-draw-5" stroke-linecap="round"/>
+    <circle cx="360" cy="-4" r="3.5" fill="#FF6A1F"/>
+    <circle cx="520" cy="-4" r="4.5" fill="#0A0A0A" stroke="#FFA066" stroke-width="2"/>
+    <circle cx="520" cy="-4" r="2" fill="#FFA066"/>
+    <rect x="750" y="-14" width="95" height="20" rx="4" fill="#181818" stroke="#2A2A2A"/>
+    <text x="797" y="0" text-anchor="middle" fill="#FFA066" font-size="9" font-weight="700" class="font-mono">BUILDING</text>
+  </g>
+
+  <!-- Skill Row 6: Agentic Systems & LangGraph -->
+  <g transform="translate(35, 250)">
+    <text x="0" y="0" fill="#E5E5E5" font-size="12" font-weight="600" class="font-sans">Agentic Systems &amp; LangGraph</text>
+    <text x="180" y="0" fill="#666666" font-size="9.5" class="font-mono">Tool Calling · Multi-Agent Swarms</text>
+    <line x1="360" y1="-4" x2="720" y2="-4" stroke="#222222" stroke-width="2"/>
+    <line x1="360" y1="-4" x2="430" y2="-4" stroke="#FF6A1F" stroke-width="2"/>
+    <line x1="360" y1="-4" x2="430" y2="-4" stroke="#FFFFFF" stroke-width="2.2" class="skill-draw-6" stroke-linecap="round"/>
+    <circle cx="360" cy="-4" r="3.5" fill="#FF6A1F"/>
+    <circle cx="430" cy="-4" r="4.5" fill="#0A0A0A" stroke="#A1A1A1" stroke-width="2"/>
+    <circle cx="430" cy="-4" r="2" fill="#A1A1A1"/>
+    <rect x="750" y="-14" width="95" height="20" rx="4" fill="#181818" stroke="#2A2A2A"/>
+    <text x="797" y="0" text-anchor="middle" fill="#A1A1A1" font-size="9" font-weight="600" class="font-mono">LEARNING</text>
+  </g>
+</svg>
