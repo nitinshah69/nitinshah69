@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 150" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="dt-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F0F0F"/>
+      <stop offset="100%" stop-color="#060606"/>
+    </linearGradient>
+
+    <linearGradient id="dt-thread" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6A1F" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#FF6A1F" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#FFA066" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <style>
+      .font-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+
+      @keyframes dtFlow {
+        0% { stroke-dashoffset: 800; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      .dt-anim-stream {
+        stroke-dasharray: 120 400;
+        animation: dtFlow 5s linear infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Container -->
+  <rect width="920" height="150" rx="10" fill="url(#dt-bg)"/>
+  <rect width="918" height="148" x="1" y="1" rx="9" fill="none" stroke="#242424" stroke-width="1"/>
+
+  <!-- Top Title -->
+  <g transform="translate(35, 28)">
+    <text x="0" y="0" fill="#F5F5F0" font-size="12" font-weight="700" letter-spacing="1.5" class="font-mono">2026 // DEVELOPMENT LOG &amp; MILESTONES</text>
+    <text x="850" y="0" text-anchor="end" fill="#666666" font-size="9.5" class="font-mono">TIMELINE</text>
+  </g>
+
+  <!-- Connecting Timeline Track -->
+  <line x1="50" y1="80" x2="870" y2="80" stroke="#222222" stroke-width="2"/>
+  <line x1="50" y1="80" x2="870" y2="80" stroke="url(#dt-thread)" stroke-width="2.5" class="dt-anim-stream" stroke-linecap="round"/>
+
+  <!-- Milestone 1: Q1 -->
+  <g transform="translate(80, 80)">
+    <circle cx="0" cy="0" r="5" fill="#0A0A0A" stroke="#FF6A1F" stroke-width="2"/>
+    <text x="0" y="-14" text-anchor="middle" fill="#FF6A1F" font-size="9" font-weight="700" class="font-mono">Q1 2026</text>
+    <text x="0" y="22" text-anchor="middle" fill="#F5F5F0" font-size="10.5" font-weight="600" class="font-sans">FOUNDATIONS</text>
+    <text x="0" y="36" text-anchor="middle" fill="#777777" font-size="8.5" class="font-mono">CS &amp; Architecture</text>
+  </g>
+
+  <!-- Milestone 2: Q2 -->
+  <g transform="translate(320, 80)">
+    <circle cx="0" cy="0" r="5" fill="#0A0A0A" stroke="#FF6A1F" stroke-width="2"/>
+    <text x="0" y="-14" text-anchor="middle" fill="#FF6A1F" font-size="9" font-weight="700" class="font-mono">Q2 2026</text>
+    <text x="0" y="22" text-anchor="middle" fill="#F5F5F0" font-size="10.5" font-weight="600" class="font-sans">FULL-STACK PROD</text>
+    <text x="0" y="36" text-anchor="middle" fill="#777777" font-size="8.5" class="font-mono">Next.js &amp; Firebase</text>
+  </g>
+
+  <!-- Milestone 3: Q3 (Active) -->
+  <g transform="translate(570, 80)">
+    <circle cx="0" cy="0" r="6" fill="#FF6A1F" stroke="#FFFFFF" stroke-width="1.5"/>
+    <text x="0" y="-14" text-anchor="middle" fill="#FFA066" font-size="9" font-weight="700" class="font-mono">Q3 2026 [ACTIVE]</text>
+    <text x="0" y="22" text-anchor="middle" fill="#FFA066" font-size="11" font-weight="700" class="font-sans">GENAI &amp; RAG</text>
+    <text x="0" y="36" text-anchor="middle" fill="#A1A1A1" font-size="8.5" class="font-mono">LangGraph &amp; FastAPI</text>
+  </g>
+
+  <!-- Milestone 4: Q4 -->
+  <g transform="translate(810, 80)">
+    <circle cx="0" cy="0" r="5" fill="#141414" stroke="#444444" stroke-width="1.5"/>
+    <text x="0" y="-14" text-anchor="middle" fill="#666666" font-size="9" font-weight="700" class="font-mono">Q4 2026</text>
+    <text x="0" y="22" text-anchor="middle" fill="#777777" font-size="10.5" font-weight="600" class="font-sans">AUTONOMOUS SAAS</text>
+    <text x="0" y="36" text-anchor="middle" fill="#555555" font-size="8.5" class="font-mono">Production Cloud AI</text>
+  </g>
+</svg>

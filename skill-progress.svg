@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 280" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="sk-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E0E0E"/>
+      <stop offset="100%" stop-color="#060606"/>
+    </linearGradient>
+
+    <style>
+      .font-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+
+      @keyframes drawSkillTrack {
+        0% { stroke-dashoffset: 400; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      @keyframes beaconSoft {
+        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 1px #FF6A1F); }
+        50% { transform: scale(1.3); filter: drop-shadow(0 0 6px #FF7A26); }
+      }
+
+      .line-pulse-1 { stroke-dasharray: 70 200; animation: drawSkillTrack 3.5s linear infinite; }
+      .line-pulse-2 { stroke-dasharray: 65 190; animation: drawSkillTrack 3.8s linear infinite; }
+      .line-pulse-3 { stroke-dasharray: 55 170; animation: drawSkillTrack 3.2s linear infinite; }
+      .line-pulse-4 { stroke-dasharray: 60 180; animation: drawSkillTrack 3.6s linear infinite; }
+      .line-pulse-5 { stroke-dasharray: 45 150; animation: drawSkillTrack 3.0s linear infinite; }
+      .line-pulse-6 { stroke-dasharray: 40 140; animation: drawSkillTrack 3.4s linear infinite; }
+
+      .endpoint-beacon {
+        animation: beaconSoft 2.5s ease-in-out infinite;
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+    </style>
+  </defs>
+
+  <!-- Container Base -->
+  <rect width="960" height="280" rx="10" fill="url(#sk-bg)"/>
+  <rect width="958" height="278" x="1" y="1" rx="9" fill="none" stroke="#242424" stroke-width="1"/>
+
+  <!-- Top Title -->
+  <g transform="translate(40, 32)">
+    <text x="0" y="0" fill="#F4F1EA" font-size="12" font-weight="700" letter-spacing="1.5" class="font-mono">ENGINEERING MASTERY // HORIZONTAL JOURNEY VECTORS</text>
+    <text x="880" y="0" text-anchor="end" fill="#8A8A8A" font-size="9.5" class="font-mono">DISCIPLINED PROGRESSION</text>
+  </g>
+
+  <!-- Skill Row 1: React.js & Next.js 14 -->
+  <g transform="translate(40, 75)">
+    <text x="0" y="0" fill="#F4F1EA" font-size="12" font-weight="600" class="font-sans">React.js &amp; Next.js 14</text>
+    <text x="190" y="0" fill="#8A8A8A" font-size="9.5" class="font-mono">App Router · Server Actions</text>
+    <line x1="380" y1="-4" x2="740" y2="-4" stroke="#222222" stroke-width="2"/>
+    <line x1="380" y1="-4" x2="710" y2="-4" stroke="#FF6A1F" stroke-width="2"/>
+    <line x1="380" y1="-4" x2="710" y2="-4" stroke="#FFFFFF" stroke-width="2.2" class="line-pulse-1" stroke-linecap="round"/>
+    <circle cx="380" cy="-4" r="3.5" fill="#FF6A1F"/>
+    <circle cx="710" cy="-4" r="5" fill="#080808" stroke="#FF6A1F" stroke-width="2" class="endpoint-beacon"/>
+    <circle cx="710" cy="-4" r="2" fill="#FF6A1F"/>
+    <rect x="770" y="-14" width="105" height="20" rx="4" fill="#151515" stroke="#242424"/>
+    <text x="822" y="0" text-anchor="middle" fill="#FF7A26" font-size="9" font-weight="700" class="font-mono">PRODUCTION</text>
+  </g>
+
+  <!-- Skill Row 2: TypeScript & JavaScript -->
+  <g transform="translate(40, 110)">
+    <text x="0" y="0" fill="#F4F1EA" font-size="12" font-weight="600" class="font-sans">TypeScript &amp; JavaScript</text>
+    <text x="190" y="0" fill="#8A8A8A" font-size="9.5" class="font-mono">Strict Types · Modern Web APIs</text>
+    <line x1="380" y1="-4" x2="740" y2="-4" stroke="#222222" stroke-width="2"/>
+    <line x1="380" y1="-4" x2="690" y2="-4" stroke="#FF6A1F" stroke-width="2"/>
+    <line x1="380" y1="-4" x2="690" y2="-4" stroke="#FFFFFF" stroke-width="2.2" class="line-pulse-2" stroke-linecap="round"/>
+    <circle cx="380" cy="-4" r="3.5" fill="#FF6A1F"/>
+    <circle cx="690" cy="-4" r="5" fill="#080808" stroke="#FF6A1F" stroke-width="2" class="endpoint-beacon"/>
+    <circle cx="690" cy="-4" r="2" fill="#FF6A1F"/>
+    <rect x="770" y="-14" width="105" height="20" rx="4" fill="#151515" stroke="#242424"/>
+    <text x="822" y="0" text-anchor="middle" fill="#FF7A26" font-size="9" font-weight="700" class="font-mono">PRODUCTION</text>
+  </g>
+
+  <!-- Skill Row 3: Python & FastAPI -->
+  <g transform="translate(40, 145)">
+    <text x="0" y="0" fill="#F4F1EA" font-size="12" font-weight="600" class="font-sans">Python &amp; FastAPI</text>
+    <text x="190" y="0" fill="#8A8A8A" font-size="9.5" class="font-mono">Async REST · Pydantic</text>
+    <line x1="380" y1="-4" x2="740" y2="-4" stroke="#222222" stroke-width="2"/>
+    <line x1="380" y1="-4" x2="620" y2="-4" stroke="#FF6A1F" stroke-width="2"/>
+    <line x1="380" y1="-4" x2="620" y2="-4" stroke="#FFFFFF" stroke-width="2.2" class="line-pulse-3" stroke-linecap="round"/>
+    <circle cx="380" cy="-4" r="3.5" fill="#FF6A1F"/>
+    <circle cx="620" cy="-4" r="4.5" fill="#080808" stroke="#FF6A1F" stroke-width="2"/>
+    <circle cx="620" cy="-4" r="2" fill="#FF6A1F"/>
+    <rect x="770" y="-14" width="105" height="20" rx="4" fill="#151515" stroke="#242424"/>
+    <text x="822" y="0" text-anchor="middle" fill="#F4F1EA" font-size="9" font-weight="600" class="font-mono">COMFORTABLE</text>
+  </g>
+
+  <!-- Skill Row 4: Firebase, SQL & NoSQL -->
+  <g transform="translate(40, 180)">
+    <text x="0" y="0" fill="#F4F1EA" font-size="12" font-weight="600" class="font-sans">Firebase, SQL &amp; NoSQL</text>
+    <text x="190" y="0" fill="#8A8A8A" font-size="9.5" class="font-mono">Firestore · PostgreSQL · MySQL</text>
+    <line x1="380" y1="-4" x2="740" y2="-4" stroke="#222222" stroke-width="2"/>
+    <line x1="380" y1="-4" x2="670" y2="-4" stroke="#FF6A1F" stroke-width="2"/>
+    <line x1="380" y1="-4" x2="670" y2="-4" stroke="#FFFFFF" stroke-width="2.2" class="line-pulse-4" stroke-linecap="round"/>
+    <circle cx="380" cy="-4" r="3.5" fill="#FF6A1F"/>
+    <circle cx="670" cy="-4" r="5" fill="#080808" stroke="#FF6A1F" stroke-width="2" class="endpoint-beacon"/>
+    <circle cx="670" cy="-4" r="2" fill="#FF6A1F"/>
+    <rect x="770" y="-14" width="105" height="20" rx="4" fill="#151515" stroke="#242424"/>
+    <text x="822" y="0" text-anchor="middle" fill="#FF7A26" font-size="9" font-weight="700" class="font-mono">PRODUCTION</text>
+  </g>
+
+  <!-- Skill Row 5: LLMs, RAG & Vectors -->
+  <g transform="translate(40, 215)">
+    <text x="0" y="0" fill="#F4F1EA" font-size="12" font-weight="600" class="font-sans">LLMs, RAG &amp; Embeddings</text>
+    <text x="190" y="0" fill="#8A8A8A" font-size="9.5" class="font-mono">OpenAI · Vector Search</text>
+    <line x1="380" y1="-4" x2="740" y2="-4" stroke="#222222" stroke-width="2"/>
+    <line x1="380" y1="-4" x2="540" y2="-4" stroke="#FF6A1F" stroke-width="2"/>
+    <line x1="380" y1="-4" x2="540" y2="-4" stroke="#FFFFFF" stroke-width="2.2" class="line-pulse-5" stroke-linecap="round"/>
+    <circle cx="380" cy="-4" r="3.5" fill="#FF6A1F"/>
+    <circle cx="540" cy="-4" r="4.5" fill="#080808" stroke="#FF7A26" stroke-width="2"/>
+    <circle cx="540" cy="-4" r="2" fill="#FF7A26"/>
+    <rect x="770" y="-14" width="105" height="20" rx="4" fill="#151515" stroke="#242424"/>
+    <text x="822" y="0" text-anchor="middle" fill="#FF7A26" font-size="9" font-weight="700" class="font-mono">BUILDING</text>
+  </g>
+
+  <!-- Skill Row 6: Agentic Systems (LangGraph) -->
+  <g transform="translate(40, 250)">
+    <text x="0" y="0" fill="#F4F1EA" font-size="12" font-weight="600" class="font-sans">Agentic Systems &amp; LangGraph</text>
+    <text x="190" y="0" fill="#8A8A8A" font-size="9.5" class="font-mono">Tool Calling · Multi-Agent</text>
+    <line x1="380" y1="-4" x2="740" y2="-4" stroke="#222222" stroke-width="2"/>
+    <line x1="380" y1="-4" x2="450" y2="-4" stroke="#FF6A1F" stroke-width="2"/>
+    <line x1="380" y1="-4" x2="450" y2="-4" stroke="#FFFFFF" stroke-width="2.2" class="line-pulse-6" stroke-linecap="round"/>
+    <circle cx="380" cy="-4" r="3.5" fill="#FF6A1F"/>
+    <circle cx="450" cy="-4" r="4.5" fill="#080808" stroke="#8A8A8A" stroke-width="2"/>
+    <circle cx="450" cy="-4" r="2" fill="#8A8A8A"/>
+    <rect x="770" y="-14" width="105" height="20" rx="4" fill="#151515" stroke="#242424"/>
+    <text x="822" y="0" text-anchor="middle" fill="#8A8A8A" font-size="9" font-weight="600" class="font-mono">LEARNING</text>
+  </g>
+</svg>
