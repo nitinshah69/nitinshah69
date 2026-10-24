@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 220" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="p2-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E0E0E"/>
+      <stop offset="100%" stop-color="#060606"/>
+    </linearGradient>
+
+    <linearGradient id="laser-beam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6A1F" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FF6A1F" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#FF6A1F" stop-opacity="0"/>
+    </linearGradient>
+
+    <style>
+      .font-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+
+      @keyframes laserScanAnim {
+        0%, 100% { transform: translateY(0px); opacity: 0.3; }
+        50% { transform: translateY(85px); opacity: 1; filter: drop-shadow(0 0 6px #FF6A1F); }
+      }
+
+      @keyframes p2ScorePulse {
+        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 2px #FF6A1F); }
+        50% { transform: scale(1.08); filter: drop-shadow(0 0 8px #FF7A26); }
+      }
+
+      .laser-line {
+        animation: laserScanAnim 3.5s ease-in-out infinite;
+      }
+
+      .p2-score {
+        animation: p2ScorePulse 3s ease-in-out infinite;
+        transform-origin: center;
+      }
+    </style>
+  </defs>
+
+  <!-- Container Base -->
+  <rect width="960" height="220" rx="10" fill="url(#p2-bg)"/>
+  <rect width="958" height="218" x="1" y="1" rx="9" fill="none" stroke="#242424" stroke-width="1"/>
+
+  <!-- Left: Metadata & Technical Architecture -->
+  <g transform="translate(40, 42)">
+    <rect width="130" height="22" rx="4" fill="#181410" stroke="#FF6A1F" stroke-width="1.2"/>
+    <text x="65" y="15" text-anchor="middle" fill="#FF7A26" font-size="9" font-weight="700" letter-spacing="1" class="font-mono">AI INTELLIGENCE MVP</text>
+
+    <text x="0" y="52" fill="#F4F1EA" font-size="18" font-weight="700" class="font-sans">AI Resume Intelligence Platform</text>
+    <text x="0" y="78" fill="#8A8A8A" font-size="12" class="font-sans">LLM-powered semantic parsing, vector similarity scoring, and ATS keyword extraction.</text>
+
+    <!-- Metrics Row -->
+    <g transform="translate(0, 110)">
+      <text x="0" y="0" fill="#FF7A26" font-size="15" font-weight="700" class="font-mono">92 / 100</text>
+      <text x="0" y="18" fill="#666666" font-size="9" class="font-mono">ATS MATCH SCORE</text>
+
+      <text x="130" y="0" fill="#F4F1EA" font-size="15" font-weight="700" class="font-mono">FASTAPI</text>
+      <text x="130" y="18" fill="#666666" font-size="9" class="font-mono">PYTHON BACKEND</text>
+
+      <text x="240" y="0" fill="#F4F1EA" font-size="15" font-weight="700" class="font-mono">STRUCTURED</text>
+      <text x="240" y="18" fill="#666666" font-size="9" class="font-mono">JSON EMBEDDINGS</text>
+    </g>
+  </g>
+
+  <!-- Right: Document + Laser Scanner Simulation -->
+  <g transform="translate(560, 35)">
+    <rect width="360" height="150" rx="8" fill="#121212" stroke="#222222"/>
+    <text x="18" y="24" fill="#8A8A8A" font-size="9.5" font-weight="600" class="font-mono">LLM RESUME VECTOR SCANNER</text>
+
+    <!-- Document Wireframe Skeleton -->
+    <g transform="translate(20, 42)">
+      <rect width="200" height="92" rx="4" fill="#181818" stroke="#282828"/>
+      <!-- Content Skeleton Lines -->
+      <line x1="14" y1="18" x2="90" y2="18" stroke="#FF6A1F" stroke-width="2.5"/>
+      <line x1="14" y1="32" x2="186" y2="32" stroke="#333333" stroke-width="2"/>
+      <line x1="14" y1="46" x2="160" y2="46" stroke="#333333" stroke-width="2"/>
+      <line x1="14" y1="60" x2="180" y2="60" stroke="#333333" stroke-width="2"/>
+      <line x1="14" y1="74" x2="120" y2="74" stroke="#333333" stroke-width="2"/>
+
+      <!-- Scanning Laser Beam -->
+      <line x1="0" y1="8" x2="200" y2="8" stroke="url(#laser-beam)" stroke-width="2.5" class="laser-line"/>
+    </g>
+
+    <!-- Score Badge Widget -->
+    <g transform="translate(245, 52)">
+      <circle cx="45" cy="40" r="32" fill="#181410" stroke="#FF6A1F" stroke-width="1.8" class="p2-score"/>
+      <text x="45" y="37" text-anchor="middle" fill="#FF7A26" font-size="16" font-weight="700" class="font-mono">92%</text>
+      <text x="45" y="52" text-anchor="middle" fill="#8A8A8A" font-size="8" font-weight="600" class="font-mono">MATCH</text>
+    </g>
+  </g>
+</svg>
