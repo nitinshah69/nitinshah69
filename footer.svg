@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 80" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="ft-thread" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6A1F" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#FF6A1F" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#FF6A1F" stop-opacity="0"/>
+    </linearGradient>
+
+    <style>
+      .font-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+      
+      @keyframes ftDraw {
+        0% { stroke-dashoffset: 800; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      .ft-anim {
+        stroke-dasharray: 120 400;
+        animation: ftDraw 5s linear infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Base Line -->
+  <line x1="40" y1="40" x2="840" y2="40" stroke="#1A1A1A" stroke-width="1.5"/>
+  
+  <!-- Animated Orange Pulse Line -->
+  <line x1="40" y1="40" x2="840" y2="40" stroke="url(#ft-thread)" stroke-width="2" class="ft-anim" stroke-linecap="round"/>
+
+  <!-- Left Origin Node -->
+  <circle cx="40" cy="40" r="3.5" fill="#0A0A0A" stroke="#FF6A1F" stroke-width="1.5"/>
+  <text x="55" y="44" fill="#A1A1A1" font-size="9" font-weight="600" letter-spacing="1" class="font-mono">BUILD</text>
+
+  <!-- Right Disappearing Marker -->
+  <text x="800" y="44" text-anchor="end" fill="#666666" font-size="9" font-weight="600" letter-spacing="1.5" class="font-mono">CONTINUOUS EVOLUTION &gt;&gt; NEXT</text>
+  <circle cx="840" cy="40" r="3" fill="#333333"/>
+</svg>

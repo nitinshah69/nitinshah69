@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 380" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Studio Lighting & Gradients -->
+    <radialGradient id="studio-spot" cx="50%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#222222" stop-opacity="0.6"/>
+      <stop offset="60%" stop-color="#0A0A0A" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0A0A0A" stop-opacity="1"/>
+    </radialGradient>
+
+    <!-- Top Isometric Face (Top Lighting) -->
+    <linearGradient id="top-face" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#242424"/>
+      <stop offset="100%" stop-color="#383838"/>
+    </linearGradient>
+
+    <!-- Left Isometric Face (Ambient Occlusion) -->
+    <linearGradient id="left-face" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181818"/>
+      <stop offset="100%" stop-color="#0F0F0F"/>
+    </linearGradient>
+
+    <!-- Right Isometric Face (Orange Accent Ambient Reflection) -->
+    <linearGradient id="right-face" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1E1E"/>
+      <stop offset="100%" stop-color="#121212"/>
+    </linearGradient>
+
+    <!-- Orange Core Glow -->
+    <linearGradient id="accent-thread" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7A33"/>
+      <stop offset="100%" stop-color="#FF5500"/>
+    </linearGradient>
+
+    <!-- Studio Floor Soft Shadow -->
+    <radialGradient id="ground-shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#000000" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="soft-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+    </filter>
+
+    <style>
+      .font-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+      
+      @keyframes floatCore {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+
+      @keyframes pulseShadow {
+        0%, 100% { transform: scale(1); opacity: 0.8; }
+        50% { transform: scale(0.92); opacity: 0.55; }
+      }
+
+      .floating-core {
+        animation: floatCore 5s ease-in-out infinite;
+      }
+
+      .shadow-anim {
+        animation: pulseShadow 5s ease-in-out infinite;
+        transform-origin: 250px 330px;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="500" height="380" rx="12" fill="#0A0A0A"/>
+  <rect width="498" height="378" x="1" y="1" rx="11" fill="none" stroke="#242424" stroke-width="1"/>
+  <circle cx="250" cy="180" r="180" fill="url(#studio-spot)"/>
+
+  <!-- Floor Ambient Shadow -->
+  <ellipse cx="250" cy="330" rx="110" ry="24" fill="url(#ground-shadow)" class="shadow-anim"/>
+
+  <!-- 3D Monolithic Isometric Developer Core -->
+  <g class="floating-core" transform="translate(0, 0)">
+    
+    <!-- Outer Wireframe Construction Grid Lines -->
+    <path d="M 250 50 L 370 120 L 370 260 L 250 330 L 130 260 L 130 120 Z" 
+          fill="none" stroke="#1F1F1F" stroke-width="1" stroke-dasharray="4 4"/>
+    
+    <!-- Top Face (CODE) -->
+    <!-- Center Point: 250, 170 | Top: 250, 90 | Left: 150, 145 | Right: 350, 145 -->
+    <polygon points="250,90 350,145 250,200 150,145" fill="url(#top-face)" stroke="#3A3A3A" stroke-width="1"/>
+    
+    <!-- Top Face Engraving: [ CODE ] -->
+    <g transform="translate(250, 145) skewX(-30) rotate(15) scale(0.9, 0.55)">
+      <text x="0" y="0" text-anchor="middle" fill="#A1A1A1" font-size="16" font-weight="700" letter-spacing="4" class="font-mono">CODE</text>
+      <!-- Sub-line Accent -->
+      <line x1="-35" y1="12" x2="35" y2="12" stroke="#FF6A1F" stroke-width="2"/>
+    </g>
+
+    <!-- Left Face (AI) -->
+    <polygon points="150,145 250,200 250,310 150,255" fill="url(#left-face)" stroke="#282828" stroke-width="1"/>
+    
+    <!-- Left Face Engraving: [ AI ] -->
+    <g transform="translate(200, 230) skewY(28) scale(0.9, 1)">
+      <text x="0" y="0" text-anchor="middle" fill="#777777" font-size="18" font-weight="700" letter-spacing="3" class="font-mono">AI</text>
+      <circle cx="0" cy="18" r="3" fill="#FF6A1F"/>
+    </g>
+
+    <!-- Right Face (SHIP) -->
+    <polygon points="250,200 350,145 350,255 250,310" fill="url(#right-face)" stroke="#222222" stroke-width="1"/>
+    
+    <!-- Right Face Engraving: [ SHIP ] -->
+    <g transform="translate(300, 230) skewY(-28) scale(0.9, 1)">
+      <text x="0" y="0" text-anchor="middle" fill="#E5E5E5" font-size="18" font-weight="700" letter-spacing="3" class="font-mono">SHIP</text>
+      <line x1="-25" y1="18" x2="25" y2="18" stroke="#333333" stroke-width="1.5"/>
+    </g>
+
+    <!-- Monolith Edge Highlights -->
+    <line x1="250" y1="90" x2="250" y2="200" stroke="#4A4A4A" stroke-width="1.5"/>
+    <line x1="250" y1="200" x2="250" y2="310" stroke="#FF6A1F" stroke-width="1.5" stroke-linecap="round"/>
+
+    <!-- Orbital Intelligent Node -->
+    <circle cx="370" cy="180" r="3.5" fill="#FF6A1F"/>
+    <line x1="350" y1="190" x2="370" y2="180" stroke="#FF6A1F" stroke-width="1" stroke-dasharray="2 2"/>
+    <text x="382" y="183" fill="#A1A1A1" font-size="8.5" letter-spacing="1" class="font-mono">NODE.01</text>
+  </g>
+
+  <!-- Technical Spec Footer Tag -->
+  <text x="250" y="360" text-anchor="middle" fill="#555555" font-size="9" letter-spacing="2" class="font-mono">CORE SYSTEM // RESTRAINT &amp; PRECISION</text>
+</svg>
