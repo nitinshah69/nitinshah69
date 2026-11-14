@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 180" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="path-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E0E0E"/>
+      <stop offset="100%" stop-color="#060606"/>
+    </linearGradient>
+
+    <linearGradient id="path-active-stream" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6A1F" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#FF6A1F" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#FFA066" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <style>
+      .font-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+
+      @keyframes pathFlow {
+        0% { stroke-dashoffset: 600; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      @keyframes focusBeacon {
+        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 3px #FF6A1F); }
+        50% { transform: scale(1.25); filter: drop-shadow(0 0 9px #FF7A26); }
+      }
+
+      .path-pulse-stream {
+        stroke-dasharray: 80 250;
+        animation: pathFlow 4.5s linear infinite;
+      }
+
+      .beacon-node {
+        animation: focusBeacon 2.5s ease-in-out infinite;
+        transform-origin: 430px 95px;
+      }
+    </style>
+  </defs>
+
+  <!-- Container Base -->
+  <rect width="960" height="180" rx="10" fill="url(#path-bg)"/>
+  <rect width="958" height="178" x="1" y="1" rx="9" fill="none" stroke="#242424" stroke-width="1"/>
+
+  <!-- Top Title Bar -->
+  <g transform="translate(40, 32)">
+    <text x="0" y="0" fill="#F4F1EA" font-size="12" font-weight="700" letter-spacing="1.5" class="font-mono">2026 PATH // ENGINEERING EVOLUTION TRAJECTORY</text>
+    <text x="880" y="0" text-anchor="end" fill="#8A8A8A" font-size="9.5" class="font-mono">ACTIVE HORIZON</text>
+  </g>
+
+  <!-- Connecting Track -->
+  <line x1="50" y1="95" x2="900" y2="95" stroke="#222222" stroke-width="2"/>
+  <line x1="50" y1="95" x2="430" y2="95" stroke="#FF6A1F" stroke-width="2"/>
+  <line x1="50" y1="95" x2="900" y2="95" stroke="url(#path-active-stream)" stroke-width="2.5" class="path-pulse-stream" stroke-linecap="round"/>
+
+  <!-- Stage 1: FOUNDATIONS (COMPLETED) -->
+  <g transform="translate(80, 95)">
+    <circle cx="0" cy="0" r="6" fill="#080808" stroke="#FF6A1F" stroke-width="2"/>
+    <path d="M -3 0 L -1 2 L 3 -2" stroke="#FF6A1F" stroke-width="1.5" fill="none"/>
+    <text x="0" y="24" text-anchor="middle" fill="#8A8A8A" font-size="10.5" font-weight="600" class="font-sans">FOUNDATIONS</text>
+    <text x="0" y="38" text-anchor="middle" fill="#555555" font-size="8.5" class="font-mono">Data Struct &amp; CS</text>
+  </g>
+
+  <!-- Stage 2: FULL STACK (COMPLETED) -->
+  <g transform="translate(250, 95)">
+    <circle cx="0" cy="0" r="6" fill="#080808" stroke="#FF6A1F" stroke-width="2"/>
+    <path d="M -3 0 L -1 2 L 3 -2" stroke="#FF6A1F" stroke-width="1.5" fill="none"/>
+    <text x="0" y="24" text-anchor="middle" fill="#8A8A8A" font-size="10.5" font-weight="600" class="font-sans">FULL STACK</text>
+    <text x="0" y="38" text-anchor="middle" fill="#555555" font-size="8.5" class="font-mono">Next.js 14, Node, SQL</text>
+  </g>
+
+  <!-- Stage 3: GENERATIVE AI (ACTIVE FOCUS - BEACON) -->
+  <g transform="translate(430, 95)">
+    <circle cx="0" cy="0" r="8" fill="#FF6A1F" stroke="#FFFFFF" stroke-width="2" class="beacon-node"/>
+    <circle cx="0" cy="0" r="2.5" fill="#FFFFFF"/>
+    <text x="0" y="-16" text-anchor="middle" fill="#FF6A1F" font-size="9" font-weight="700" letter-spacing="1" class="font-mono">[ CURRENT FOCUS ]</text>
+    <text x="0" y="24" text-anchor="middle" fill="#FF7A26" font-size="11" font-weight="700" class="font-sans">GENERATIVE AI</text>
+    <text x="0" y="38" text-anchor="middle" fill="#F4F1EA" font-size="8.5" class="font-mono">LLMs, RAG, Embeddings</text>
+  </g>
+
+  <!-- Stage 4: AGENTIC SYSTEMS (IN PROGRESS) -->
+  <g transform="translate(610, 95)">
+    <circle cx="0" cy="0" r="6" fill="#141414" stroke="#777777" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="2" fill="#777777"/>
+    <text x="0" y="24" text-anchor="middle" fill="#F4F1EA" font-size="10.5" font-weight="600" class="font-sans">AGENTIC SYSTEMS</text>
+    <text x="0" y="38" text-anchor="middle" fill="#8A8A8A" font-size="8.5" class="font-mono">Tool Calling, LangGraph</text>
+  </g>
+
+  <!-- Stage 5: PRODUCTION AI (UPCOMING) -->
+  <g transform="translate(790, 95)">
+    <circle cx="0" cy="0" r="5" fill="#101010" stroke="#444444" stroke-width="1.5"/>
+    <text x="0" y="24" text-anchor="middle" fill="#8A8A8A" font-size="10.5" font-weight="600" class="font-sans">PRODUCTION AI</text>
+    <text x="0" y="38" text-anchor="middle" fill="#555555" font-size="8.5" class="font-mono">Low-Latency Edge AI</text>
+  </g>
+
+  <!-- Stage 6: REAL PRODUCTS (FUTURE) -->
+  <g transform="translate(900, 95)">
+    <circle cx="0" cy="0" r="4.5" fill="#101010" stroke="#333333" stroke-width="1.5"/>
+    <text x="0" y="24" text-anchor="middle" fill="#555555" font-size="10" font-weight="600" class="font-sans">SCALE</text>
+    <text x="0" y="38" text-anchor="middle" fill="#444444" font-size="8" class="font-mono">SaaS</text>
+  </g>
+</svg>
