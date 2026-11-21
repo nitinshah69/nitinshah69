@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 160" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="bp-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E0E0E"/>
+      <stop offset="100%" stop-color="#060606"/>
+    </linearGradient>
+
+    <linearGradient id="bp-thread" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6A1F" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#FF6A1F" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#FFA066" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <style>
+      .font-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+
+      @keyframes bpDraw {
+        0% { stroke-dashoffset: 1400; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      .bp-anim-line {
+        stroke-dasharray: 180 500;
+        animation: bpDraw 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Base Plate -->
+  <rect width="960" height="160" rx="10" fill="url(#bp-bg)"/>
+  <rect width="958" height="158" x="1" y="1" rx="9" fill="none" stroke="#242424" stroke-width="1"/>
+
+  <!-- Top Title -->
+  <g transform="translate(40, 30)">
+    <text x="0" y="0" fill="#F4F1EA" font-size="12" font-weight="700" letter-spacing="1.5" class="font-mono">HOW I BUILD // 8-STAGE ENGINEERING EXECUTION PIPELINE</text>
+    <text x="880" y="0" text-anchor="end" fill="#8A8A8A" font-size="9.5" class="font-mono">PROCESS INTEGRITY</text>
+  </g>
+
+  <!-- Track Line -->
+  <line x1="45" y1="85" x2="915" y2="85" stroke="#1E1E1E" stroke-width="2"/>
+  <line x1="45" y1="85" x2="915" y2="85" stroke="url(#bp-thread)" stroke-width="2.5" class="bp-anim-line" stroke-linecap="round"/>
+
+  <!-- 8 Stages -->
+  <!-- Stage 1: PROBLEM -->
+  <g transform="translate(60, 85)">
+    <circle cx="0" cy="0" r="4.5" fill="#080808" stroke="#444444" stroke-width="1.5"/>
+    <text x="0" y="-14" text-anchor="middle" fill="#666666" font-size="8.5" class="font-mono">01</text>
+    <text x="0" y="22" text-anchor="middle" fill="#F4F1EA" font-size="10" font-weight="600" class="font-sans">PROBLEM</text>
+  </g>
+
+  <!-- Stage 2: RESEARCH -->
+  <g transform="translate(180, 85)">
+    <circle cx="0" cy="0" r="4.5" fill="#080808" stroke="#444444" stroke-width="1.5"/>
+    <text x="0" y="-14" text-anchor="middle" fill="#666666" font-size="8.5" class="font-mono">02</text>
+    <text x="0" y="22" text-anchor="middle" fill="#F4F1EA" font-size="10" font-weight="600" class="font-sans">RESEARCH</text>
+  </g>
+
+  <!-- Stage 3: DESIGN -->
+  <g transform="translate(300, 85)">
+    <circle cx="0" cy="0" r="4.5" fill="#080808" stroke="#FF6A1F" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="1.5" fill="#FF6A1F"/>
+    <text x="0" y="-14" text-anchor="middle" fill="#FF6A1F" font-size="8.5" class="font-mono">03</text>
+    <text x="0" y="22" text-anchor="middle" fill="#F4F1EA" font-size="10" font-weight="600" class="font-sans">DESIGN</text>
+  </g>
+
+  <!-- Stage 4: BUILD -->
+  <g transform="translate(420, 85)">
+    <circle cx="0" cy="0" r="5.5" fill="#080808" stroke="#FF6A1F" stroke-width="2"/>
+    <circle cx="0" cy="0" r="2" fill="#FF6A1F"/>
+    <text x="0" y="-14" text-anchor="middle" fill="#FF6A1F" font-size="8.5" font-weight="700" class="font-mono">04</text>
+    <text x="0" y="22" text-anchor="middle" fill="#FF7A26" font-size="10.5" font-weight="700" class="font-sans">BUILD</text>
+  </g>
+
+  <!-- Stage 5: INTEGRATE AI -->
+  <g transform="translate(550, 85)">
+    <circle cx="0" cy="0" r="5.5" fill="#080808" stroke="#FF6A1F" stroke-width="2"/>
+    <circle cx="0" cy="0" r="2" fill="#FF7A26"/>
+    <text x="0" y="-14" text-anchor="middle" fill="#FF6A1F" font-size="8.5" font-weight="700" class="font-mono">05</text>
+    <text x="0" y="22" text-anchor="middle" fill="#FF7A26" font-size="10.5" font-weight="700" class="font-sans">EMBED AI</text>
+  </g>
+
+  <!-- Stage 6: TEST -->
+  <g transform="translate(680, 85)">
+    <circle cx="0" cy="0" r="4.5" fill="#080808" stroke="#444444" stroke-width="1.5"/>
+    <text x="0" y="-14" text-anchor="middle" fill="#666666" font-size="8.5" class="font-mono">06</text>
+    <text x="0" y="22" text-anchor="middle" fill="#F4F1EA" font-size="10" font-weight="600" class="font-sans">TEST</text>
+  </g>
+
+  <!-- Stage 7: DEPLOY -->
+  <g transform="translate(800, 85)">
+    <circle cx="0" cy="0" r="5" fill="#080808" stroke="#FF6A1F" stroke-width="2"/>
+    <circle cx="0" cy="0" r="2" fill="#FFFFFF"/>
+    <text x="0" y="-14" text-anchor="middle" fill="#FF6A1F" font-size="8.5" class="font-mono">07</text>
+    <text x="0" y="22" text-anchor="middle" fill="#F4F1EA" font-size="10.5" font-weight="700" class="font-sans">DEPLOY</text>
+  </g>
+
+  <!-- Stage 8: ITERATE -->
+  <g transform="translate(900, 85)">
+    <circle cx="0" cy="0" r="4.5" fill="#080808" stroke="#444444" stroke-width="1.5"/>
+    <text x="0" y="-14" text-anchor="middle" fill="#666666" font-size="8.5" class="font-mono">08</text>
+    <text x="0" y="22" text-anchor="middle" fill="#8A8A8A" font-size="10" font-weight="600" class="font-sans">ITERATE</text>
+  </g>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 170" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="ep-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#101010"/>
+      <stop offset="100%" stop-color="#070707"/>
+    </linearGradient>
+
+    <style>
+      .font-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+
+      @keyframes epGlow {
+        0%, 100% { border-color: #242424; }
+        50% { border-color: #FF6A1F; }
+      }
+    </style>
+  </defs>
+
+  <!-- Container Base -->
+  <rect width="920" height="170" rx="10" fill="url(#ep-bg)"/>
+  <rect width="918" height="168" x="1" y="1" rx="9" fill="none" stroke="#242424" stroke-width="1"/>
+
+  <!-- Top Title -->
+  <g transform="translate(35, 28)">
+    <text x="0" y="0" fill="#F5F5F0" font-size="12" font-weight="700" letter-spacing="1.5" class="font-mono">HOW I THINK // CORE ENGINEERING PRINCIPLES</text>
+    <text x="850" y="0" text-anchor="end" fill="#666666" font-size="9.5" class="font-mono">PHILOSOPHY</text>
+  </g>
+
+  <!-- 4 Principles Cards in a Clean Editorial Grid -->
+  <g transform="translate(35, 52)">
+    <!-- Principle 01 -->
+    <rect x="0" y="0" width="200" height="92" rx="6" fill="#141414" stroke="#262626"/>
+    <text x="16" y="24" fill="#FF6A1F" font-size="11" font-weight="700" class="font-mono">01 // INTENT</text>
+    <text x="16" y="44" fill="#F5F5F0" font-size="12" font-weight="700" class="font-sans">Solve Problem First</text>
+    <text x="16" y="64" fill="#888888" font-size="9.5" class="font-sans">Understand user constraints &amp; data flow before coding.</text>
+
+    <!-- Principle 02 -->
+    <rect x="216" y="0" width="200" height="92" rx="6" fill="#141414" stroke="#262626"/>
+    <text x="232" y="24" fill="#FF6A1F" font-size="11" font-weight="700" class="font-mono">02 // CLARITY</text>
+    <text x="232" y="44" fill="#F5F5F0" font-size="12" font-weight="700" class="font-sans">Keep Systems Simple</text>
+    <text x="232" y="64" fill="#888888" font-size="9.5" class="font-sans">Modular, type-safe, and self-documenting code.</text>
+
+    <!-- Principle 03 -->
+    <rect x="432" y="0" width="200" height="92" rx="6" fill="#141414" stroke="#262626"/>
+    <text x="448" y="24" fill="#FF6A1F" font-size="11" font-weight="700" class="font-mono">03 // LEVERAGE</text>
+    <text x="448" y="44" fill="#F5F5F0" font-size="12" font-weight="700" class="font-sans">Use AI with Purpose</text>
+    <text x="448" y="64" fill="#888888" font-size="9.5" class="font-sans">Embed intelligence where it provides concrete ROI.</text>
+
+    <!-- Principle 04 -->
+    <rect x="648" y="0" width="200" height="92" rx="6" fill="#141414" stroke="#262626"/>
+    <text x="664" y="24" fill="#FF6A1F" font-size="11" font-weight="700" class="font-mono">04 // VELOCITY</text>
+    <text x="664" y="44" fill="#F5F5F0" font-size="12" font-weight="700" class="font-sans">Ship &amp; Iterate</text>
+    <text x="664" y="64" fill="#888888" font-size="9.5" class="font-sans">Continuous telemetry, benchmarks, and rapid release.</text>
+  </g>
+</svg>

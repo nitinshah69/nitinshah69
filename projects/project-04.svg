@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="p4-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141414"/>
+      <stop offset="100%" stop-color="#080808"/>
+    </linearGradient>
+
+    <style>
+      .font-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+
+      @keyframes syncRotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      @keyframes peerBurst {
+        0% { stroke-dashoffset: 60; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      .sync-core-ring {
+        animation: syncRotate 12s linear infinite;
+        transform-origin: 100px 65px;
+      }
+
+      .burst-vector {
+        stroke-dasharray: 8 20;
+        animation: peerBurst 1.8s linear infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Base Plate -->
+  <rect width="700" height="300" rx="10" fill="url(#p4-bg)"/>
+  <rect width="698" height="298" x="1" y="1" rx="9" fill="none" stroke="#242424" stroke-width="1"/>
+
+  <!-- Top Metadata Bar -->
+  <g transform="translate(30, 32)">
+    <circle cx="6" cy="0" r="3.5" fill="#FF6A1F"/>
+    <text x="18" y="4" fill="#A1A1A1" font-size="10" font-weight="700" letter-spacing="1.5" class="font-mono">PROJECT.04 // 24-HOUR HACKATHON BUILD</text>
+    <text x="640" y="4" text-anchor="end" fill="#666666" font-size="9.5" class="font-mono">COMPETITION: RECKON 7.0</text>
+  </g>
+
+  <!-- Left Info Column -->
+  <g transform="translate(30, 75)">
+    <text x="0" y="0" fill="#F5F5F0" font-size="20" font-weight="700" class="font-sans">RECKON 7.0 Real-Time Sprint Engine</text>
+    <text x="0" y="24" fill="#888888" font-size="11.5" class="font-sans">High-concurrency collaborative platform built under 24-hour hackathon constraints.</text>
+    
+    <!-- Tech Pills -->
+    <g transform="translate(0, 50)">
+      <rect width="70" height="22" rx="4" fill="#181818" stroke="#2A2A2A"/>
+      <text x="35" y="14" text-anchor="middle" fill="#E5E5E5" font-size="9" font-weight="600" class="font-mono">Next.js</text>
+      
+      <rect x="78" width="70" height="22" rx="4" fill="#181818" stroke="#2A2A2A"/>
+      <text x="113" y="14" text-anchor="middle" fill="#E5E5E5" font-size="9" font-weight="600" class="font-mono">Firebase</text>
+
+      <rect x="156" width="65" height="22" rx="4" fill="#181818" stroke="#2A2A2A"/>
+      <text x="188" y="14" text-anchor="middle" fill="#E5E5E5" font-size="9" font-weight="600" class="font-mono">Tailwind</text>
+
+      <rect x="229" width="70" height="22" rx="4" fill="#181818" stroke="#2A2A2A"/>
+      <text x="264" y="14" text-anchor="middle" fill="#E5E5E5" font-size="9" font-weight="600" class="font-mono">WebSockets</text>
+    </g>
+
+    <!-- Key Metrics Highlight -->
+    <g transform="translate(0, 115)">
+      <text x="0" y="0" fill="#666666" font-size="9" font-weight="600" class="font-mono">SPRINT DURATION</text>
+      <text x="0" y="18" fill="#FF6A1F" font-size="15" font-weight="700" class="font-mono">24 Hours</text>
+
+      <text x="120" y="0" fill="#666666" font-size="9" font-weight="600" class="font-mono">EVENT STATUS</text>
+      <text x="120" y="18" fill="#F5F5F0" font-size="15" font-weight="700" class="font-mono">Deployed Live</text>
+      
+      <text x="230" y="0" fill="#666666" font-size="9" font-weight="600" class="font-mono">DATA SYNC</text>
+      <text x="230" y="18" fill="#FF6A1F" font-size="15" font-weight="700" class="font-mono">Sub-Second</text>
+    </g>
+  </g>
+
+  <!-- Right Visual Card: Real-time Multi-User State Syncer -->
+  <g transform="translate(410, 70)">
+    <rect width="250" height="195" rx="8" fill="#121212" stroke="#262626"/>
+    
+    <g transform="translate(25, 30)">
+      <!-- Peer Node 1 -->
+      <circle cx="20" cy="20" r="14" fill="#1A1A1A" stroke="#333333"/>
+      <text x="20" y="24" text-anchor="middle" fill="#A1A1A1" font-size="9" class="font-mono">U1</text>
+      
+      <!-- Center Rotating Sync Hub -->
+      <g>
+        <circle cx="100" cy="65" r="28" fill="none" stroke="#FF6A1F" stroke-width="1" stroke-dasharray="4 4" class="sync-core-ring" opacity="0.6"/>
+        <circle cx="100" cy="65" r="22" fill="#181818" stroke="#FF6A1F" stroke-width="2"/>
+        <text x="100" y="69" text-anchor="middle" fill="#FFFFFF" font-size="9" font-weight="700" class="font-mono">SYNC</text>
+      </g>
+
+      <!-- Peer Node 2 -->
+      <circle cx="180" cy="20" r="14" fill="#1A1A1A" stroke="#333333"/>
+      <text x="180" y="24" text-anchor="middle" fill="#A1A1A1" font-size="9" class="font-mono">U2</text>
+
+      <!-- Peer Node 3 -->
+      <circle cx="100" cy="120" r="14" fill="#1A1A1A" stroke="#333333"/>
+      <text x="100" y="124" text-anchor="middle" fill="#A1A1A1" font-size="9" class="font-mono">U3</text>
+
+      <!-- Connecting Active Vectors with Packet Bursts -->
+      <line x1="32" y1="28" x2="82" y2="52" stroke="#FF6A1F" stroke-width="2" class="burst-vector"/>
+      <line x1="168" y1="28" x2="118" y2="52" stroke="#FF6A1F" stroke-width="2" class="burst-vector"/>
+      <line x1="100" y1="87" x2="100" y2="106" stroke="#FF6A1F" stroke-width="2" class="burst-vector"/>
+    </g>
+  </g>
+</svg>
